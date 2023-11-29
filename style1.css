@@ -1,8 +1,9 @@
 .row{
     margin-left: 500px;
     margin-right: 500px;
-    margin-bottom: 50px;
+    margin-bottom: 150px;
     margin-top: 50px;
+    color: purple;
     
 }
 
@@ -23,22 +24,31 @@ h1{
    
 }
 .paragrafi{
-    margin-left: 400px;
+    margin-left: 500px;
+    margin-right: 500px;
     margin-bottom: 50px;
     margin-top: 50px;
+
 }
 
-main{
-    margin-left: 300px;
-    margin-right: 300px;
-    width: 300px;
-    margin-left: 250px;
+.main img{
+    margin-left: 350px;
+    margin-right: 350px;
+    width: 500px;
+    height: 500px;
+    border-radius: 30%;
+    
+
+}
+.paragrafi{
+    color: purple;
 }
 .historia{
     margin-left: 200px;
     margin-right: 200px;
     margin-top: 50px;
     margin-bottom: 50px;
+    color: purple;
 }
 
 .historia1{
@@ -46,6 +56,7 @@ main{
     margin-right: 200px;
     margin-top: 50px;
     margin-bottom: 50px;
+    color: purple;
    
 }
 
