@@ -8,8 +8,8 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 #logo{
-    width: 250px;
-    height: 180px;
+    width: 200px;
+    height: 160px;
     margin-left: 50px;
     border-radius: 30px; 
     border: 2px solid white;
@@ -79,10 +79,10 @@ ul li:hover {
 }
 
 #div3 {
-    background: url("images (1).jpg") center center;
+    background: url('images (1).jpg')center center ;
     background-size: cover;
     position: absolute;
-    top: 290px;
+    top: 270px;
     left: 50%;
     width: 50%;
     height: 500px;
@@ -124,6 +124,50 @@ ul li:hover {
     border: 5px solid plum;
   
 }
+
+.footeri{
+display: flex;
+justify-content: space-around;
+background-image: url("800px_COLOURBOX24604092.jpg");
+background-size:contain;
+padding: 1%;
+flex-direction: column; 
+
+
+}
+#div4 p{
+    font-size: 30px;
+    font-style: italic;
+   color: purple;
+   margin-left: 30px;  
+   
+}
+#div5{
+
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+
+}
+#div5 p{
+   font-size:smaller ;
+   color:purple ;
+   
+}
+ img{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+#div6 p{
+    text-align: right;
+    color:purple;
+    margin-right: 50px;
+}
+#div6 p span{
+    font-size: 30px;
+}
+
 
    
 

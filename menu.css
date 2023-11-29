@@ -1,0 +1,40 @@
+
+
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 5%;
+}
+
+#text{
+    text-align: center;
+  
+}
+#text a{
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: brown;
+}
+#text a:hover{
+    border: 3px solid black;
+    background-color: pink;
+    border-radius: 20px;
+}
+#foto img{
+    width: 320px;
+    height: 320px;
+    border-radius: 40px;
+    transition: opacity 0.3s ease-in-out; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+}
+#foto:hover img{
+    opacity: 0.2;
+}
