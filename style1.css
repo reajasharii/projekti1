@@ -1,18 +1,29 @@
 .row{
-    margin-left: 500px;
-    margin-right: 500px;
+    margin-left: 400px;
+    margin-right: 400px;
     margin-bottom: 150px;
     margin-top: 50px;
-    color: purple;
+    background-color: lightcoral; 
+    border-radius: 30%;
+    width: 400px;
+    height: 400px;
+    transition: all 0.3s ease; 
+    letter-spacing: 3px; 
+    word-spacing: 15px;
+    text-decoration: none;
+    color: brown;
+ 
     
 }
 
 h1{
+    margin-left: 10px;
     margin-top: 50px;
     margin-bottom: 50px;
 }
 
 .column{
+    margin-left: 120px;
     width: 200px;
     max: width 500px;
     height: 100px;
