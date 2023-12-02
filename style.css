@@ -30,12 +30,12 @@ ul{
 }
 ul li a{
     text-decoration: none;
-    color: #9370db;
+    color: brown;
 }
 ul li{
    
    border: 1px solid white;
-    background-color:plum;
+    background-color:lightcoral;
    padding: 20px;
     font-size: 25px;
     margin: 10px;
@@ -48,8 +48,6 @@ ul li:hover {
     font-weight: bold;
     border: 3px solid #9370db;
 }
-
-
     .maini {
         display: flex;
         flex-direction: column; 
