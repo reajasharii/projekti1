@@ -57,7 +57,7 @@
         
                     <div class="form-group">
                    <label>Order now:</label>
-                     <textarea type="text" id="ordernow" name="ordernow" class="form-control"></textarea>
+                     <textarea type="text" id="ordernow" name="ordernow" class="required"></textarea>
                      </div>
                      <div class="third-inputs box-24-expand">
                      <input class="send" type="submit" name="submit" value="Send" />
@@ -91,14 +91,19 @@
                         let ordernowError = document.getElementById('ordernowError');
                 
                         nameError.innerText = '';
+                        surnameError.innerText = '';
+                        addressError.innerText = '';
                         emailError.innerText = '';
+                        phoneError.innerText = '';
+                        ordernowError.innerText = '';
+
                 
                         if(!nameRegex.test(nameInput.value)){
                             nameError.innerText = 'invalid name';
                             return;
                         }
                         if(!surname.test(nameInput.value)){
-                            nameError.innerText = 'invalid surname';
+                            surnameError.innerText = 'invalid surname';
                             return;
                         }
 
@@ -124,18 +129,19 @@
                     </script>
 
 
-                             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-                              <div class="content-selection">
-                                  <div class="contact-info">
-                                      <div><i class="fas fa-map-marker-alt"></i>Address,Prishtine,Kosovo</div>
-                                      <div><i class="fas fa-envelope">nonstopcake@gmail.com</i></div>
-                                      <div><i class="fas fa-phone"></i>+38310079285</div>
-                                      <div><i class="fas fa-clock">Mon-Saturday 9:00AM to 20:00PM</i></div>
+                   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+                   <div class="content-selection">
+                   <div class="contact-info">
+                   <div><i class="fas fa-map-marker-alt"></i>Rruga:Garibalti,Prishtine,Kosovo</div>
+                   <div><i class="fas fa-envelope">nonstopcake@gmail.com</i></div>
+                   <div><i class="fas fa-phone"></i>+38310079285</div>
+                   <div><i class="fas fa-clock">Mon-Saturday 9:00AM to 20:00PM</i></div>
                               
-                                  </div>
+                                 
+                   </div>
                 
                 
-                                </div>
+                 </div>
                 
                 
 
