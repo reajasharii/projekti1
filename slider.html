@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+            box-sizing: border-box;
+        }
+        body{
+            background: lightpink;
+        }
+        .fotot{
+            width: 900px;
+            display: flex;
+            overflow-x: scroll;
+        }
+        .fotot div{
+            width: 100%;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-gap: 20px;
+            padding: 10px;
+            flex: none;
+        }
+        .fotot div img{
+            width: 250px;
+            height: 300px;
+            filter: grayscale(100%);
+            transition: transform 0.5s;
+            border-radius: 10%;
+        }
+        .fotot::-webkit-scrollbar{
+            display: none;
+        }
+        .fotot1{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10% auto;
+            margin-top: 20px;
+        }
+        #buton,#buton1{
+            width: 50px;
+            cursor: pointer;
+            margin: 40px;
+            border-radius: 40%;
+        }
+        .fotot div img:hover{
+            filter: grayscale(0);
+            cursor: pointer;
+            transform: scale(1,1);
+        }
+        h1{
+            text-align: center;
+            color: purple;
+       
+        }
+    </style>
+    <header>
+        <div class="hederi">
+        <img id="logo" src="IMAGES/unnamed.png" alt="foto">
+ </div>
+ <div  class=" hederi1">
+<ul>
+    <li><a href="Home.html">Home</a></li>
+    <li><a href="Menu.html">Menu</a></li>
+    <li><a href="History.html">Our Story</a></li>
+    <li><a href="ContactUs.html">Contact Us</a></li>
+    <li><a href="Login.html">Log in</a></li>
+</ul>
+    </div>
+    </header>
+    <h1>Cakes That Take the Cake</h1>
+  
+    <div class="fotot1">
+        <img src="IMAGES/download (4).png" id="buton"> 
+        <div class="fotot">
+            <div>
+                <span><img src="IMAGES/download (13).jpg"></span>
+                <span><img src="IMAGES/images (9).jpg"></span>
+                <span><img src="IMAGES/images (7).jpg"></span>
+            </div>
+            <div>
+                <span><img src="IMAGES/images (10).jpg"></span>
+                <span><img src="IMAGES/images (11).jpg"></span>
+                <span><img src="IMAGES/download (14).jpg"></span>
+            </div>
+            <div>
+                <span><img src="IMAGES/download (9).jpg"></span>
+                <span><img src="IMAGES/download.jpg"></span>
+                <span><img src="IMAGES/download (5).jpg"></span>
+            </div>
+        </div>
+        <img src="IMAGES/download.png" id="buton1"> 
+    </div>
+    <footer>
+        <div class="footeri">
+           
+    <div id="div4">
+        <p>Follow Us</p>
+    </div>
+        <div id="div5">
+        <a href="https://www.facebook.com/"><img src="IMAGES/download (2).png" alt="foto"><p>@nonCake</p></a>
+        <a href="https://www.instagram.com"><img src="IMAGES/download (3).png" alt="foto"><p>@nonCake</p></a>
+        <a href="https://twitter.com/?lang=en"><img src="IMAGES/download (1).png" alt=""><p>@nonCake</p></a>
+    </div>
+    <div id="div6">
+       
+        <p>contactUs in:<br><span>03810079285</span></p>
+    
+    </div>
+        </div>
+    </footer>
+
+    <script>
+        
+        let scrollContainer = document.querySelector(".fotot");
+let buton = document.getElementById("buton");
+let buton1 = document.getElementById("buton1");
+
+scrollContainer.addEventListener("wheel", (evt) => {
+    evt.preventDefault();
+    scrollContainer.scrollLeft += evt.deltaY;
+    scrollContainer.style.overflowX = "auto";
+});
+
+buton1.addEventListener("click", () => {
+    scrollContainer.style.scrollBehavior = "smooth";
+    scrollContainer.scrollLeft += 900;
+});
+
+buton.addEventListener("click", () => {
+    scrollContainer.style.scrollBehavior = "smooth";
+    scrollContainer.scrollLeft -= 900;
+});
+
+    </script>
+   
+</body>
+</html>
