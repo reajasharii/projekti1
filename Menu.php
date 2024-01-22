@@ -9,20 +9,9 @@
 </head>
 
 <body>
-    <header>
-        <div class="hederi">
-        <img id="logo" src="IMAGES/unnamed.png" alt="foto">
- </div>
- <div  class=" hederi1">
-<ul>
-    <li><a href="Home.html">Home</a></li>
-    <li><a href="Menu.html">Menu</a></li>
-    <li><a href="History.html">Our Story</a></li>
-    <li><a href="ContactUs.html">Contact Us</a></li>
-    <li><a href="Login.html">Log in</a></li>
-</ul>
-    </div>
-    </header>
+<?php
+    include 'hederi.php';
+    ?>
 
 <link rel="stylesheet" href="menu.css">
 

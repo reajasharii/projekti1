@@ -77,10 +77,10 @@ ul li:hover {
 }
 
 #div3 {
-    background: url('IMAGES/images (1).jpg')center center ;
+    background: url('IMAGES/images (1).jpg') center center ;
     background-size: cover;
     position: absolute;
-    top: 270px;
+    top: 260px;
     left: 50%;
     width: 50%;
     height: 500px;

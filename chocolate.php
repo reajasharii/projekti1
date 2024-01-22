@@ -9,20 +9,9 @@
 </head>
 
 <body>
-    <header>
-        <div class="hederi">
-        <img id="logo" src="IMAGES/unnamed.png" alt="foto">
- </div>
- <div  class=" hederi1">
-<ul>
-    <li><a href="Home.html">Home</a></li>
-    <li><a href="Menu.html">Menu</a></li>
-    <li><a href="History.html">Our Story</a></li>
-    <li><a href="ContactUs.html">Contact Us</a></li>
-    <li><a href="Login.html">Log in</a></li>
-</ul>
-    </div>
-    </header>
+<?php
+    include 'hederi.php';
+    ?>
 
 <link rel="stylesheet" href="menu.css">
 
@@ -72,23 +61,9 @@ Price: €5.25<br><br><a href="ContactUs.html">Order here</a></p></p>
 </div>
 
 
-<footer>
-    <div class="footeri">
-       
-<div id="div4">
-    <p>Follow Us</p>
-</div>
-    <div id="div5">
-    <a href="https://www.facebook.com/"><img src="IMAGES/download (2).png" alt="foto"><p>@nonCake</p></a>
-    <a href="https://www.instagram.com"><img src="IMAGES/download (3).png" alt="foto"><p>@nonCake</p></a>
-    <a href="https://twitter.com/?lang=en"><img src="IMAGES/download (1).png" alt=""><p>@nonCake</p></a>
-</div>
-<div id="div6">
+<?php
+include 'footer.php';
+?>
    
-    <p>contactUs in:<br><span>03810079285</span></p>
-
-</div>
-    </div>
-</footer>
 </body>
 </html>
