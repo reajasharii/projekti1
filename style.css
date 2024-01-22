@@ -165,6 +165,92 @@ flex-direction: column;
 #div6 p span{
     font-size: 30px;
 }
+/*RESPONSIVE DESIGN*/
+.container{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+ }
+@media (min-width: 475px){
+    .container{
+        max-width: 475px;
+    }
+}
+@media (min-width: 640px){
+    .container{
+        max-width: 640px;
+    }
+}
+@media (min-width: 760px){
+    .container{
+        max-width: 760px;
+    }
+}
+@media (min-width: 1024px){
+    .container{
+        max-width: 1024px;
+    }
+}
+@media (min-width: 1200px){
+    .container{
+        max-width: 1200px;
+    }
+}
+@media (min-width: 1536px){
+    .container{
+        max-width: 1536px;
+    }
+}
+#logo {
+    margin-left: 10px;
+    width: 180px;
+    height: 150px;
+}
+header {
+  
+    padding: 20px;
+}
+
+ul li{
+   
+        
+        padding: 20px;
+         font-size: 20px;
+         margin: 5px;
+   
+     
+     
+   
+}
+
+
+#div4 p{
+    font-size: 20px;
+   margin-left: 20px;  
+   
+}
+ img{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+#div5{
+    margin-left: 20px;
+
+}
+
+#div6 p{
+    margin-right: 10px;
+}
+#div6 p span{
+    font-size: 20px;
+}
+
+   
+
+
 
 
    

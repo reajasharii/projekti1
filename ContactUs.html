@@ -63,67 +63,8 @@
                 </div>
                     </div>
                     
-                <script>
-                    let nameRegex = /^[A-Z][a-z]{3,8}$/;
-                    let surnameRegex = /^[A-Z][a-z]{3,8}$/;
-                    let addressRegex = /^[A-Z][a-z]{3,8}$/;
-                    let emailRegex = /[a-zA-Z.-_]+@+[a-z]+\.+[a-z]{2,3}$/;
-                    let phoneRegex = /[a-zA-Z.-_]+@+[a-z]+\.+[a-z]{2,3}$/;
-                    let ordernowRegex = /[a-zA-Z.-_]+@+[a-z]+\.+[a-z]{2,3}$/;
-
-
-                
-                    function validateForm(){
-                        let nameInput = document.getElementById('name');
-                        let nameError = document.getElementById('nameError');
-                        let surnameInput = document.getElementById('surname');
-                        let surnameError = document.getElementById('surnameError');
-                        let addressInput = document.getElementById('address');
-                        let addressError = document.getElementById('emailaddress');
-                        let emailInput = document.getElementById('email');
-                        let emailError = document.getElementById('emailError');
-                        let phoneInput = document.getElementById('phone');
-                        let phoneError = document.getElementById('phoneError');
-                        let ordernowInput = document.getElementById('ordernow');
-                        let ordernowError = document.getElementById('ordernowError');
-                
-                        nameError.innerText = '';
-                        surnameError.innerText = '';
-                        addressError.innerText = '';
-                        emailError.innerText = '';
-                        phoneError.innerText = '';
-                        ordernowError.innerText = '';
-
-                
-                        if(!nameRegex.test(nameInput.value)){
-                            nameError.innerText = 'invalid name';
-                            return;
-                        }
-                        if(!surname.test(nameInput.value)){
-                            surnameError.innerText = 'invalid surname';
-                            return;
-                        }
-
-                        if(!addressRegex.test(addressInput.value)){
-                            addressError.innerText = 'invalid address';
-                            return;
-                        }
-                        if(!emailRegex.test(emailInput.value)){
-                        emailError.innerText = 'invalid email';
-                        return;
-                        }
-                        if(!phoneRegex.test(phoneInput.value)){
-                        phoneError.innerText = 'invalid phone';
-                        return;
-                        }
-                        if(!ordernowRegex.test(ordernowInput.value)){
-                        ordernowError.innerText = 'invalid ordernow';
-                        return;
-                        }
-                
-                        alert('form submitted succesfully!');
-                    }
-                    </script>
+             
+                    
 
 
                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -158,6 +99,55 @@
                 </div>
                     </div>
                 </footer>
+
+
+                <script>
+                function validateForm() {
+                 let nameInput = document.getElementById('name');
+                 let surnameInput = document.getElementById('surname');
+                 let addressInput = document.getElementById('address');
+                 let emailInput = document.getElementById('email');
+                 let phoneInput = document.getElementById('phone');
+
+   
+                 if (!nameInput.value.trim()) {
+                 alert('Please enter your name.');
+                 return;
+                 }
+
+                if (!surnameInput.value.trim()) {
+                alert('Please enter your surname.');
+                return;
+                }
+
+                if (!addressInput.value.trim()) {
+                alert('Please enter your address.');
+                return;
+                 }
+
+                if (!emailInput.value.trim()) {
+                alert('Please enter your email.');
+                return;
+                }
+
+    
+                let emailRegex = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/;
+                if (!emailRegex.test(emailInput.value.trim())) {
+                alert('Please enter a valid email address.');
+                return;
+                }
+
+                if (!phoneInput.value.trim()) {
+                alert('Please enter your phone number.');
+                return;
+                }
+
+    
+
+               alert('Form submitted successfully!');
+               }
+
+                </script>
                    
 
 

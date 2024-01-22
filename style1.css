@@ -96,7 +96,97 @@ h1{
     font-size: 18px;
 }
 
-  
+
+
+
+
+
+/*RESPONSIVE DESIGN*/
+ .container{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+ }
+@media (min-width: 475px){
+    .container{
+        max-width: 475px;
+    }
+}
+@media (min-width: 640px){
+    .container{
+        max-width: 640px;
+    }
+}
+@media (min-width: 760px){
+    .container{
+        max-width: 760px;
+    }
+}
+@media (min-width: 1024px){
+    .container{
+        max-width: 1024px;
+    }
+}
+@media (min-width: 1200px){
+    .container{
+        max-width: 1200px;
+    }
+}
+@media (min-width: 1536px){
+    .container{
+        max-width: 1536px;
+    }
+}
+.row .column {
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    background-color: lightcoral;
+    border-radius: 10%;
+    width: 42%;
+    height: auto;
+    transition: all 0.3s ease;
+    letter-spacing: 3px;
+    word-spacing: 15px;
+    text-decoration: none;
+    color: brown;
+    box-sizing: border-box;
+}
+
+.paragrafi {
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.main img {
+   margin-left: 15%;
+   margin-right: 15%;
+    width: 70%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.historia, .historia1 {
+    margin-left: 10%;
+    margin-right:10%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 20px;
+    max-width: 70%;
+    line-height: 24px;
+    font-size: 11px;
+}
+
 
 
 
