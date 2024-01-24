@@ -1,11 +1,11 @@
 .row .column{
     margin-left: 400px;
     margin-right: 400px;
-    margin-bottom:100px ;
-    margin-top:100px ;
+    margin-bottom:80px ;
+    margin-top:80px ;
     background-color: lightcoral; 
     border-radius: 10%;
-    width: 400px;
+    width: 350px;
     height: 400px;
     transition: all 0.3s ease; 
     letter-spacing: 3px; 

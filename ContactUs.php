@@ -20,33 +20,43 @@
        <div class="row">
         <div class="column">
                     <h1 class="con">Contact</h1>
+                    <br><br>
+                    
                       <div>                     
-                     <label for="Emri">Name:</label>
-                     <input type="text" id="name1" name="name" class="required"/>
+                     <label > Name:</label>
+                     <input type="text"  name="name" required>
                     </div>
+                    <br><br>
+
                     <div>
-                     <label for="Mbiemri">Surname:</label>
-                     <input type="text" id="mbiemri" name="mbiemri" class="required"/>
+                     <label >Surname:</label>
+                     <input type="text" name="mbiemri" required>
                     </div>
+                    <br><br>
+
                     <div>
-                    <label for="Address">Address:</label>
-                    <input type="text" id="Address" name="Address" class="required"/>
+                    <label>Address:</label>
+                    <input type="text" name="Address" required>
                     </div>
+                    <br><br>
+
                     <div>
-                     <label for="E-maili">E-mail:</label>
-                    <input type="text" id="E-maili" name="E-maili" class="required"/>
+                     <label>E-mail:</label>
+                    <input type="text" name="E-maili" required>
                     </div>
+                    <br><br>
+
                     <div>
-                    <label for="Numri">Phone:</label>
-                    <input type="text" id="Numri" name="Numri" class="required"/>
+                    <label>Phone:</label>
+                    <input type="text" name="Numri" required>
                     </div>
+                    <br><br>
+
                     <div>
-                   
-        
-                 
                      <div class="third-inputs box-24-expand">
-                     <input class="send" type="submit" name="submit" value="Send" />
+                     <input type="submit"  value="Send" >
                     </div>
+                    <br><br>
                                                                
                 </div>
                     </div>
