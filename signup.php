@@ -1,3 +1,39 @@
+<?php
+$email= "";
+$username="";
+$password="";
+$dateBirth="";
+$Gender="";
+
+$errorMessage="";
+$succesMessage="";
+
+if($_SERVER['REQUEST_METHOD']=='POST'){
+    if (isset($_POST['submit'])){
+
+    $email= $_POST ["email"];
+    $username= $_POST["username"];
+    $password=$_POST["password"];
+    $dateBirth=$_POST["dateBirth"];
+    $Gender=$_POST["Gender"];
+
+    do{
+        if(empty($email) || empty($username)|| empty($password) || empty($dateBirth)|| empty($Gender)){
+            $errorMessage = "All the fiels are required";
+            break;
+        }
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $errorMessage = "Please enter a valid email address";
+            break;
+        }
+
+        $successMessage = "sign up correctly";
+    }while(false);
+}
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,17 +54,32 @@
 <div class="login">
     <div class="loginForm">
         <h1>Sign up</h1>
-        <form onsubmit="return validateForm()">
+
+        <?php
+        if(!empty($errorMessage)){
+            echo "
+            <div class='alert alertError' role='alert'>
+                <strong>$errorMessage</strong>
+                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+            </div>";
+        }
+        ?>
+     
+ 
+        <form method="post" action="skripti_regjistrimit.php" onsubmit="return validateForm()">
+
+
+        
         <div class="forma">
-            <input type="email" id="email" placeholder="Email" required>
+            <input type="email" id="email" name="email" placeholder="Email" required value="<?php echo $email; ?>">
             <span id="emailError" class="error-message"></span>
          
         </div>
         <div class="forma">
-            <input type="text" id="username" placeholder="Username" required>
+            <input type="text" id="username" name="username" placeholder="Username" required value="<?php echo $username; ?>">
         </div>
-        <div class="forma">
-            <input type="password" id="password" placeholder="Password" required>
+        <div class="forma"> 
+            <input type="password" id="password" name="password" placeholder="Password" required value="<?php echo $password; ?>">
             <span id="passwordError" class="error-message"></span>
             <style>
                 .error-message {
@@ -39,14 +90,36 @@
             </style>
             
         </div>
+        <div class="forma">
+                <input type="date" id="dob" name="dateBirth" required value="<?php echo $dateBirth; ?>">
+            </div>
+        <div class="forma">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="Gender" required value="<?php echo $Gender; ?>">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
         <div class="remember-forgot">
             <label><input type="checkbox"> Remeber me</label>
           
         </div>
-        <button type="submit" class="butoni"><a href="#">Signup</a></button>
+
+        <?php
+        if(!empty($succesMessage)){
+            echo "
+            <div class='alert alertSuccess' role='alert'>
+                <strong>$successMessage</strong>
+                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+            </div>";
+    }
+        
+        ?>
+        <button type="submit" class="butoni">Signup</button>
 
         <div class="fundi">
-            <p>Already have an account?<a href="Login.html">Login</a></p> 
+            <p>Already have an account?<a href="Login.php">Login</a></p> 
         </div>
     </form>
     </div>

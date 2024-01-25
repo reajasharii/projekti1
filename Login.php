@@ -18,6 +18,7 @@
 <div class="login">
     <div class="loginForm">
         <h1>Log in</h1>
+        <span id="passwordError" class="error-message"></span>
      <form onsubmit="return validateForm()">
         <div class="forma">
             <input type="text" id="username" placeholder="Username" required>
@@ -40,7 +41,7 @@
         <button type="submit" class="butoni"><a>Login</a></button>
 
         <div class="fundi">
-            <p>Don't have an account? <a href="signup.html">Register</a></p> 
+            <p>Don't have an account? <a href="signup.php">Register</a></p> 
         </div>
     </form>
     </div>

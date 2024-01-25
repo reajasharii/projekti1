@@ -19,20 +19,20 @@
     <div id="foto">
         <img src="IMAGES/download.jpg" alt="foto">
         <div id="text">
-            <a href="cake.html">CAKE</a>
+            <a href="cake.php">CAKE</a>
          
         </div>
     </div>
     <div id="foto">
         <img src="IMAGES/images (5).jpg" alt="foto">
         <div id="text">
-            <a href="caffe.html">COFFEE</a>
+            <a href="caffe.php">COFFEE</a>
         </div>
     </div>
     <div id="foto">
         <img src="IMAGES/download (2).jpg" alt="foto"> 
         <div id="text">
-            <a href="chocolate.html">CHOCOLATE DRINKS</a>
+            <a href="chocolate.php">CHOCOLATE DRINKS</a>
         </div>
     </div>
 </div>
