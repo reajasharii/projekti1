@@ -19,3 +19,13 @@ class Database {
         return $this->connection;
     }
 }
+//testim a eshte lidhur me sukses
+/*$databaseInstance = Database::getInstance();
+$connection = $databaseInstance->getConnection();
+
+if ($connection && $connection->connect_error) {
+    die("Connection failed: " . $connection->connect_error);
+} else {
+    echo "Connection successful!";
+}*/      
+?>

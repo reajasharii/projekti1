@@ -41,7 +41,9 @@ class Auth {
 
 
         $this->password = password_hash($this->password, PASSWORD_BCRYPT);
-        $sql = "INSERT INTO `users` (`email`,`username`, `password`, `is_admin`) VALUES ('".$this->email."',".$this->username."', '".$this->password."', '".$this->role."')";
+        $sql = "INSERT INTO `users` (`email`,`username`, `password`, `is_admin`) VALUES ('".$this->email."','".$this->username."', '".$this->password."', '".$this->role."')";
+
+
         
         if($this->mysqli->query($sql))
             return $this->mysqli->insert_id;
@@ -52,6 +54,9 @@ class Auth {
     private function validate_email() {
         return preg_match('/[\w\.\-\_]+\@\w+\.[a-zA-Z]{2,5}/i', $this->email);
     }
+    private function validate_username(){
+       return preg_match('/^[a-zA-Z0-9_]+$/', $this->username);
+    }
 
     private function validate_password() {
         return (strlen($this->password) >= 8);
@@ -61,3 +66,11 @@ class Auth {
         return ($this->role == 0 || $this->role == 1);
     }
 }
+//testimi a funksionon
+/*$u = new Auth("reajasharo@gmail.com","reaa","12334567", 1);
+if($u->register()){
+    echo "yes";
+}else{
+    echo "no";
+}*/
+?>
