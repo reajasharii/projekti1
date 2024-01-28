@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,8 +20,9 @@
 <div class="login">
     <div class="loginForm">
         <h1>Sign up</h1>
-
-      <form onsubmit="return validateForm()">
+       
+        <form method="POST" action="<?= $_SERVER['PHP_SELF']?>" onsubmit="return validateForm()">
+     
       <span id="Error" class="error-message"></span>
         <div class="forma">
             <input type="email" id="email" name="email" placeholder="Email">
@@ -42,7 +44,7 @@
         <div class="remember-forgot">
             <label><input type="checkbox"> Remeber me</label>
         </div>
-        <button type="submit" class="butoni">Signup</button>
+        <button name="signup_btn" type="submit" class="butoni">Signup</button>
 
         <div class="fundi">
             <p>Already have an account?<a href="Login.php">Login</a></p> 

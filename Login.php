@@ -1,6 +1,7 @@
 
-
-
+<?php
+include "connect/db.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +23,7 @@
     <div class="loginForm">
         <h1>Log in</h1>
         <span id="Error" class="error-message"></span>
-     <form onsubmit="return validateForm()">
+        <form method="POST" action="<?= $_SERVER['PHP_SELF']?>" onsubmit="return validateForm()">;
         <div class="forma">
             <input type="text" id="username" placeholder="Username" >
         </div>
