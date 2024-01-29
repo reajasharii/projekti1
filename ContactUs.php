@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CONTACT US</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Validimi.css">
     
     
    
@@ -24,38 +25,38 @@
                     
                       <div>                     
                      <label > Name:</label>
-                     <input type="text"  name="name" required>
+                     <input type="text" id="name" name="name" required>
                     </div>
                     <br><br>
 
                     <div>
                      <label >Surname:</label>
-                     <input type="text" name="mbiemri" required>
+                     <input type="text" id="surname" name="mbiemri" required>
                     </div>
                     <br><br>
 
                     <div>
                     <label>Address:</label>
-                    <input type="text" name="Address" required>
+                    <input type="text" id="address" name="Address" required>
                     </div>
                     <br><br>
 
                     <div>
                      <label>E-mail:</label>
-                    <input type="text" name="E-maili" required>
+                    <input type="text" id="email" name="E-maili" required>
                     </div>
                     <br><br>
 
                     <div>
                     <label>Phone:</label>
-                    <input type="text" name="Numri" required>
+                    <input type="text" id="phone"  name="Numri" required>
                     </div>
                     <br><br>
 
                     <div>
-                     <div class="third-inputs box-24-expand">
-                     <input type="submit"  value="Send" >
-                    </div>
+                    <form onsubmit="return validateForm()">
+                    <input type="submit" value="Send">
+                    </form>
                     <br><br>
                                                                
                 </div>
@@ -95,43 +96,45 @@ include 'footer.php';
    
                  if (!nameInput.value.trim()) {
                  alert('Please enter your name.');
-                 return;
+                 return false;
                  }
 
                 if (!surnameInput.value.trim()) {
                 alert('Please enter your surname.');
-                return;
+                return false;
                 }
 
                 if (!addressInput.value.trim()) {
                 alert('Please enter your address.');
-                return;
+                return false;
                  }
 
                 if (!emailInput.value.trim()) {
                 alert('Please enter your email.');
-                return;
+                return false;
                 }
 
     
                 let emailRegex = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/;
                 if (!emailRegex.test(emailInput.value.trim())) {
                 alert('Please enter a valid email address.');
-                return;
+                return false;
                 }
 
                 if (!phoneInput.value.trim()) {
                 alert('Please enter your phone number.');
-                return;
+                return false;
                 }
 
     
 
                alert('Form submitted successfully!');
+               return true;
                }
 
                 </script>
-                   
+
+
 
 
 </body>
