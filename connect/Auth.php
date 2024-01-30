@@ -67,7 +67,7 @@ class Auth {
     }
 }
 //testimi a funksionon
-/*$u = new Auth("reajashari@gmail.com","reaa","12334567rrrr",0);
+/*$u = new Auth("reajashari@gmail.com","reaa","rea123456",0);
 if($u->register()){
     echo "yes";
 }else{

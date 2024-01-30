@@ -5,7 +5,7 @@ class Database {
     private $connection = null;
 
     public function __construct() {
-        $this->connection = new mysqli("localhost", "root", "", "clients");
+        $this->connection = new mysqli("localhost", "root", "", "shop");
     }
 
     public static function getInstance() {

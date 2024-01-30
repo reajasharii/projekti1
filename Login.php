@@ -1,41 +1,37 @@
-<?php 
-    session_start();
-    include 'autoload.php';
-    
-    $errors = [];
+<?php
+session_start();
 
-    if(isset($_POST['login-btn'])) {
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-        $role = $_POST['role'];
+include 'autoload.php';
 
-        $email = isset($_POST['email']) ? $_POST['email'] : null;
-        $user_obj = new Auth($username, $password, $role,$email);
+$errors = [];
 
-        if($user = $user_obj->login()) {
-            $_SESSION['username'] = $user['username'];
-            $_SESSION['is_logged_in'] = true;
-            $_SESSION['is_admin'] = $user['is_admin'];
+if (isset($_POST['login-btn'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $role = $_POST['role'];
 
-            if(isset($_POST['remember_me'])) {
-                if($_POST['remember_me'] == 1) {
-                    setcookie("username", $_SESSION['username'], time()+3600);
-                    setcookie("is_logged_in", $_SESSION['is_logged_in'], time()+3600);
-                    setcookie("is_admin", $_SESSION['is_admin'], time()+3600);
-                }
-            }
+    $user = new Auth(null, $username, $password, $role);
 
-            if($user['is_admin'] == 1)
-                header("Location: Dashboard.php");
-            else 
-                header("Location: home.php");
-        } else {
-            $errors[] = "Username or/and password is incorrect!";
+    $login_result = $user->login();
+
+    if ($login_result) {
+        $_SESSION['email'] = $login_result['email'];
+        $_SESSION['username'] = $login_result['username'];
+        $_SESSION['is_logged_in'] = true;
+        $_SESSION['is_admin'] = $login_result['is_admin'];
+
+       if ($login_result['is_admin'] == 0) {
+            header("Location: menu.php");
+            exit(); 
+        } elseif ($login_result['is_admin'] == 1) {
+            header("Location: Dashboard.php");
+            exit(); 
         }
+    } else {
+        $errors[] = "Invalid username or password!";
     }
-
+}
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,8 +43,8 @@
                   color: red; 
                    font-size: 15px;
                    font-weight: bold;}</style>
+            
 </head>
-
 <body>
 <?php
     include 'hederi.php';
@@ -73,11 +69,13 @@
                 <?php   
                     }
                 ?>
+  
         <form method="POST" onsubmit="return validateForm()">
+        
         <div class="forma">
                         <select name="role" class="form-control">
-                            <option value="0">Customer</option>
-                            <option value="1">Administrator</option>
+                            <option value="0">user</option>
+                            <option value="1">Admin</option>
                         </select>
                     </div>
         <div class="forma">
@@ -95,6 +93,9 @@
         <div class="fundi">
             <p>Don't have an account? <a href="signup.php">Register</a></p> 
         </div>
+        <div class="message-container">
+
+</div>
     </form>
     </div>    
 </div>
@@ -102,6 +103,6 @@
 include 'footer.php';
 ?>
     <script type ="text/javascript" src="script/login.js"></script>
-    
+   
 </body>
 </html>

@@ -1,5 +1,6 @@
 <?php 
     session_start();
+    
     include 'autoload.php';
 
     $errors = [];
@@ -22,14 +23,18 @@
             $_SESSION['is_logged_in'] = true;
             $_SESSION['is_admin'] = $_user['is_admin'];
 
+
             if($_user['is_admin'] == 0)
-                header("Location: home.php");
+                header("Location: login.php");
             else
-                header("Location: Dashboard.php");
+                header("Location: login.php");
+            
+                $_SESSION['signup_success'] = true;
         } else {
             $errors[] = "Please enter valid username(email) and password (8 or more chars)!";
         }
     }
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -70,8 +75,8 @@
         <div class="forma">
         
                     <select name="role" class="form-control">
-                        <option value="0">Customer</option>
-                        <option value="1">Administrator</option>
+                        <option value="0">user</option>
+                        <option value="1">Admin</option>
                     </select>
                 </div>
                 <div class="forma">
@@ -107,6 +112,7 @@
 include 'footer.php';
 ?>
    <script type ="text/javascript" src="script/signup.js"></script>
+   
 
 </body>
 </html>
