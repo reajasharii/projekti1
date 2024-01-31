@@ -156,6 +156,14 @@
 <?php
 include 'includes/footer.php';
 ?>
+
+<?php
+$username = $_GET['username'] ?? '';
+if (!empty($username)) {
+    echo "<script>alert('Welcome, $username!');</script>";
+}
+?>
+
 </body>
 </html>
 

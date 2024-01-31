@@ -21,10 +21,10 @@ if (isset($_POST['login-btn'])) {
         $_SESSION['is_admin'] = $login_result['is_admin'];
 
        if ($login_result['is_admin'] == 0) {
-            header("Location: menu.php");
+        header("Location: home.php?username=" . urlencode($login_result['username']));
             exit(); 
         } elseif ($login_result['is_admin'] == 1) {
-            header("Location: Dashboard.php");
+            header("Location: Dashboard.php?username=" . urlencode($login_result['username']));
             exit(); 
         }
     } else {
@@ -103,6 +103,7 @@ if (isset($_POST['login-btn'])) {
 include 'includes/footer.php';
 ?>
     <script type ="text/javascript" src="script/login.js"></script>
+
    
 </body>
 </html>

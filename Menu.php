@@ -37,8 +37,8 @@
     </div>
 </div>
 <?php
-    include 'includes/footeri.php';
-    ?>
+include 'includes/footer.php';
+?>
 
 </body>
 </html>
