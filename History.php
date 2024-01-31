@@ -13,7 +13,7 @@
     include 'hederi.php';
     ?>
 
-    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="css/style1.css">
    <div class="paragrafi">
             <h2>The Beautiful Story Of Cake...</h2>
                 </div>

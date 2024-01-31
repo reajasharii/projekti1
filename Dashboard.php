@@ -92,7 +92,7 @@
         <?php   
             }
         ?>
-        <link rel="stylesheet" href="dashboard.css">
+        <link rel="stylesheet" href="css/dashboard.css">
         <!-- CREATE PRODUCT -->
        
             <form method="POST" action="<?= $_SERVER['PHP_SELF'] ?>" enctype="multipart/form-data">
@@ -121,7 +121,7 @@
 <div class="products1">
 <div class="forma">
     <h3>Products</h3>
-        <!-- CREATE PRODUCT -->
+      
         <div class="col-md-8">
             <?php if(count($products) > 0): ?>
             <div class="table-responsive">

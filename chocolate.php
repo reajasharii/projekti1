@@ -13,7 +13,7 @@
     include 'hederi.php';
     ?>
 
-<link rel="stylesheet" href="menu.css">
+<link rel="stylesheet" href="css/menu.css">
 
 <div class="menuja">
     <div id="foto1">

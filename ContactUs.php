@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CONTACT US</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="Validimi.css">
+    <link rel="stylesheet" href="css/Validimi.css">
     
     
    
@@ -14,7 +14,7 @@
 <?php
     include 'hederi.php';
     ?>
-    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="css/style1.css">
 
     
     
@@ -66,7 +66,7 @@
                     
 
 
-                   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
                    <div class="content-selection">
                    <div class="contact-info">
                    <div><i class="fas fa-map-marker-alt"></i>Rruga:Garibalti,Prishtine,Kosovo</div>
