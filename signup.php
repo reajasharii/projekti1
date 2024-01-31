@@ -48,7 +48,7 @@
 
 <body>
 <?php
-    include 'hederi.php';
+    include 'includes/hederi.php';
     ?>
 
     <link rel="stylesheet" href="Login.css">
@@ -109,7 +109,7 @@
 </div>
 
 <?php
-include 'footer.php';
+include 'includes/footer.php';
 ?>
    <script type ="text/javascript" src="script/signup.js"></script>
    

@@ -47,7 +47,7 @@ if (isset($_POST['login-btn'])) {
 </head>
 <body>
 <?php
-    include 'hederi.php';
+    include 'includes/hederi.php';
     ?>
 
 <link rel="stylesheet" href="Login.css">
@@ -100,7 +100,7 @@ if (isset($_POST['login-btn'])) {
     </div>    
 </div>
 <?php
-include 'footer.php';
+include 'includes/footer.php';
 ?>
     <script type ="text/javascript" src="script/login.js"></script>
    

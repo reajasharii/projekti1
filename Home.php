@@ -11,7 +11,7 @@
 
 <body>
     <?php
-    include 'hederi.php';
+    include 'includes/hederi.php';
     ?>
     
 <div class="maini">
@@ -29,7 +29,7 @@
 
 
 <?php
-include 'footer.php';
+include 'includes/footer.php';
 ?>
    
 </body>
