@@ -10,7 +10,7 @@
 
 <body>
 <?php
-    include 'hederi.php';
+    include 'includes/hederi.php';
     ?>
 
     <link rel="stylesheet" href="css/style1.css">
@@ -40,7 +40,7 @@
 </div>
 
 <?php
-include 'footer.php';
+include 'includes/footer.php';
 ?>
    
 

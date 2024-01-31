@@ -70,7 +70,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <?php
-    include 'hederi.php';
+    include 'includes/hederi.php';
     ?>
 <body>
 <?php include 'includes/menu.php' ?>
@@ -154,7 +154,7 @@
     </div>
 </div>
 <?php
-include 'footer.php';
+include 'includes/footer.php';
 ?>
 </body>
 </html>

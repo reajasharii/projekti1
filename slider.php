@@ -65,7 +65,7 @@
         }
     </style>
      <?php
-    include 'hederi.php';
+    include 'includes/hederi.php';
     ?>
     <h1>Cakes That Take the Cake</h1>
   
@@ -91,7 +91,7 @@
         <img src="IMAGES/download.png" id="buton1"> 
     </div>
     <?php
-include 'footer.php';
+include 'includes/footer.php';
 ?>
    
 
