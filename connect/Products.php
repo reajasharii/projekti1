@@ -36,7 +36,7 @@ class Products {
     }
 
     public function create($data) {
-        $sql = "INSERT INTO `products` (`title`, `price`, `qty`, `images`, `admin_id`) VALUES ('".$data['title']."', '".$data['price']."', '".$data['qty']."', '".$data['images']."', '".$data['admin_id']."')";
+        $sql = "INSERT INTO `products` (`title`, `price`, `description`,`qty`, `images`, `admin_id`) VALUES ('".$data['title']."', '".$data['price']."', '".$data['qty']."', '".$data['images']."', '".$data['admin_id']."')";
         
         if($result = $this->mysqli->query($sql))
             return true;
@@ -45,7 +45,7 @@ class Products {
     } 
 
     public function update($id, $data) {
-        $sql = "UPDATE `products` SET `title`='".$data['title']."', `price`='".$data['price']."', `qty`='".$data['qty']."' WHERE `id`='".$id."'";
+        $sql = "UPDATE `products` SET `title`='".$data['title']."', `price`='".$data['price']."', `description`='".$data['description']."',`qty`='".$data['qty']."' WHERE `id`='".$id."'";
         
         if($result = $this->mysqli->query($sql))
             return true;

@@ -68,6 +68,7 @@ h3 {
 .table {
     width: 100%;
     border-collapse: collapse;
+    
 }
 
 .table th, .table td {
@@ -80,9 +81,10 @@ h3 {
     background-color: #f2f2f2;
 }
 .btn {
-    padding: 5px 10px;
-    margin-right: 5px;
+    padding: 2px 6px;
+    margin-right: 10px;
 }
+
 
 .btn-primary {
     background-color: #007BFF;
@@ -118,23 +120,13 @@ h3 {
     color: #333;
 }
 
-.alert {
-    background-color: #f8d7da;
-    color: #721c24;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #f5c6cb;
-    border-radius: 4px;
-}
+
 
 ul {
     list-style-type: none;
     padding-left: 0;
 }
 
-.alert li {
-    margin-left: 20px;
-}
 
 .form2 {
     margin-bottom: 15px;

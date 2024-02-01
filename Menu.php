@@ -19,7 +19,7 @@
     <div id="foto">
         <img src="IMAGES/download.jpg" alt="foto">
         <div id="text">
-            <a href="cake.php">CAKE</a>
+            <a href="cake.php">New products here</a>
          
         </div>
     </div>

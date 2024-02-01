@@ -17,17 +17,18 @@
     if(isset($_POST['save_product_btn'])) {
         $title = $_POST['title'];
         $price = $_POST['price'];
+        $description = $_POST['description'];
         $qty = $_POST['qty'];
 
         $images = [];
         $tmp_names = [];
        
-        if(!empty($title) && !empty($price) && !empty($qty) && !empty($_FILES['image']['name'])) {
+        if(!empty($title) && !empty($price) && !empty($description) && !empty($qty) && !empty($_FILES['image']['name'])) {
             $images = [$_FILES['image']['name']];
             
             move_uploaded_file($_FILES['image']['tmp_name'], "./assets/img/products/".$_FILES['image']['name']);
 
-            if($p->create(['title' => $title, 'price' => $price, 'qty' => $qty, 'images' => json_encode($images), "admin_id" => 1]))
+            if($p->create(['title' => $title, 'price' => $price, 'description' => $description,'qty' => $qty, 'images' => json_encode($images), "admin_id" => 1]))
                 header("Location: dashboard.php");
             else
                 $errors[] = "Something want wrong while adding the product!";
@@ -73,7 +74,6 @@
     include 'includes/hederi.php';
     ?>
 <body>
-<?php include 'includes/menu.php' ?>
 
 <div class="products">
 <div class="form">
@@ -105,6 +105,10 @@
                     <input type="text" name="price" class="form-control" id="price" >
                 </div>
                 <div class="forma1">
+                    <label for="description">Description</label>
+                    <input type="text" name="description" class="form-control" id="description" >
+                </div>
+                <div class="forma1">
                     <label for="qty">Quantity</label>
                     <input type="number" name="qty" class="form-control" id="qty">
                 </div>
@@ -130,15 +134,19 @@
                         <th>ID</th>
                         <th>Title</th>
                         <th>Price</th>
+                        <th>description</th>
                         <th>Qty</th>
-                        <th></th>
+                        <th>Images</th>
                     </tr>
                     <?php foreach($products as $product): ?>
                         <tr>
                             <th><?= $product['id'] ?></th>
                             <th><?= $product['title'] ?></th>
                             <th><?= $product['price'] ?> &euro;</th>
+                            <th><?= $product['description'] ?></th>
                             <th><?= $product['qty'] ?></th>
+                            <th><?= $product['images'] ?></th>
+                            
                             <th>
                                 <a href="?action=edit&product_id=<?= $product['id'] ?>" class="btn btn-sm btn-primary">Edit</a>
                                 <a href="?action=delete&product_id=<?= $product['id'] ?>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?');">Delete</a>

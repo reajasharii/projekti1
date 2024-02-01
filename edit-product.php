@@ -20,10 +20,11 @@
     if(isset($_POST['update_product_btn'])) {
         $title = $_POST['title'];
         $price = $_POST['price'];
+        $description = $_POST['description'];
         $qty = $_POST['qty'];
 
         if(!empty($title) && !empty($price) && !empty($qty)) {
-            if($products->update($id, ['title' => $title, 'price' => $price, 'qty' => $qty])) 
+            if($products->update($id, ['title' => $title, 'price' => $price, 'description' => $description,'qty' => $qty])) 
                 header("Location: dashboard.php");
             else
                 $errors[] = "Something want wrong while updating the product!";
@@ -42,8 +43,6 @@
   
 </head>
 <body>
-
-    <?php include 'includes/menu.php' ?>
 
     <div class="edit">
         <h3>Update product</h3>
@@ -71,6 +70,10 @@
                     <div class="form2">
                         <label for="price">Price</label>
                         <input type="text" name="price" class="form-control" id="price" value="<?= $product['price'] ?>" />
+                    </div>
+                    <div class="form2">
+                        <label for="description">description</label>
+                        <input type="text" name="description" class="form-control" id="description" value="<?= $product['description'] ?>" />
                     </div>
                     <div class="form2">
                         <label for="qty">Quantity</label>
