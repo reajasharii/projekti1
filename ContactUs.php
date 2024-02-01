@@ -31,25 +31,25 @@
 
                     <div>
                      <label >Surname:</label>
-                     <input type="text" id="surname" name="mbiemri" required>
+                     <input type="text" id="surname" name="surname" required>
                     </div>
                     <br><br>
 
                     <div>
                     <label>Address:</label>
-                    <input type="text" id="address" name="Address" required>
+                    <input type="text" id="address" name="address" required>
                     </div>
                     <br><br>
 
                     <div>
                      <label>E-mail:</label>
-                    <input type="text" id="email" name="E-maili" required>
+                    <input type="text" id="email" name="email" required>
                     </div>
                     <br><br>
 
                     <div>
                     <label>Phone:</label>
-                    <input type="text" id="phone"  name="Numri" required>
+                    <input type="text" id="phone"  name="phone" required>
                     </div>
                     <br><br>
 
