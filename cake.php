@@ -1,4 +1,8 @@
 <?php
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 include 'autoload.php';
 
 $productsInstance = new Products();
@@ -23,8 +27,16 @@ $products = $productsInstance->all();
 
 <div class="menuja">
 <?php foreach($products as $product): ?>
-            <div id="foto1">
-                <img src="IMAGES/<?= $product['images'][0] ?>" alt="foto">
+    
+    <div id="foto1">
+        <?php
+        $images = json_decode($product['images'], true);
+        if (is_array($images) && count($images) > 0) {
+            foreach ($images as $image) {
+                echo "<img src='IMAGES/{$image}' alt='foto'>";
+            }
+        }
+        ?>
                 <div id="text1">
                     <h1><?= $product['title'] ?></h1><br><br>
                     <p><?= $product['description'] ?><br><br><br>

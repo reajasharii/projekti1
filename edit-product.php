@@ -23,6 +23,7 @@
         $description = $_POST['description'];
         $qty = $_POST['qty'];
 
+
         if(!empty($title) && !empty($price) && !empty($qty)) {
             if($products->update($id, ['title' => $title, 'price' => $price, 'description' => $description,'qty' => $qty])) 
                 header("Location: dashboard.php");

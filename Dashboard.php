@@ -26,8 +26,8 @@
         if(!empty($title) && !empty($price) && !empty($description) && !empty($qty) && !empty($_FILES['image']['name'])) {
             $images = [$_FILES['image']['name']];
             
-            move_uploaded_file($_FILES['image']['tmp_name'], "./assets/img/products/".$_FILES['image']['name']);
-
+            move_uploaded_file($_FILES['image']['tmp_name'], "img-src/img".$_FILES['image']['name']);
+    
             if($p->create(['title' => $title, 'price' => $price, 'description' => $description,'qty' => $qty, 'images' => json_encode($images), "admin_id" => 1]))
                 header("Location: dashboard.php");
             else
@@ -156,7 +156,7 @@
                 </table>
             </div>
             <?php else: ?>
-                0 products
+                
             <?php endif; ?>
         </div>
     </div>
