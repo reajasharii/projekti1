@@ -1,21 +1,19 @@
 <?php 
+$servername = "localhost"; 
+$db = "infoklientit";
+$username = "root";
+$password = "";
 
-class Database {
-    private static $instance = null;
-    private $connection = null;
+try{
 
-    public function __construct() {
-        $this->connection = new mysqli("localhost", "root", "", "klienti");
-    }
+$conn = new PDO("mysql:host=$username;infokilentit=klienti",$username,$password,$db);
 
-    public static function getInstance() {
-        if(!self::$instance) 
-            self::$instance = new self();
-        
-        return self::$instance;
-    }
-
-    public function getConnection() {
-        return $this->connection;
-    }
+$conn->setAttribute(PDO:ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+die("Lidhja deshtoi: " . mysqli_connect_error());
+   echo "Eshte i lidhur me sukses";
 }
+catch(PDOException $e)
+{
+    echo "Lidhja deshtoi: " $e->getMessage();
+}
+    ?>
