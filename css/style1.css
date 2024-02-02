@@ -59,8 +59,8 @@ h1{
 .main img{
     margin-left: 350px;
     margin-right: 350px;
-    width: 500px;
-    height: 500px;
+    width: 150px;
+    height: 150px;
     border-radius: 30%;
     
 
@@ -165,7 +165,7 @@ h1{
 .main img {
    margin-left: 15%;
    margin-right: 15%;
-    width: 70%;
+    width: 10%;
     height: auto;
     border-radius: 15px;
 }
