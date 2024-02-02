@@ -1,7 +1,7 @@
 *{
-   
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body{
     background-color: lightpink;
@@ -19,6 +19,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    flex-direction: column;
     padding: 20px;
 }
 
@@ -26,6 +27,9 @@ ul{
   
     display: flex;
     list-style: none;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    margin-top: 20px;
 
 }
 ul li a{
@@ -47,6 +51,17 @@ ul li:hover {
     background-color:white;
     font-weight: bold;
     border: 3px solid #9370db;
+}
+@media only screen and (min-width: 600px) {
+    
+    header {
+        flex-direction: row; 
+        align-items: flex-start;
+    }
+
+    ul {
+        margin-top: 0; 
+    }
 }
     .maini {
         display: flex;
@@ -80,7 +95,7 @@ ul li:hover {
     background: url('IMAGES/images (1).jpg') center center ;
     background-size: cover;
     position: absolute;
-    top: 260px;
+    top: 256px;
     left: 50%;
     width: 50%;
     height: 500px;
