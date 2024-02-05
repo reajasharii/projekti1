@@ -2,14 +2,17 @@
     session_start();
     include 'autoload.php';
 
-    $p = new Products;
+  
 
     if(isset($_SESSION['is_admin']) || isset($_COOKIE['is_admin'])) {
         if($_SESSION['is_admin'] != 1) {
             die("You are not allowed to view this page!");
         }
+    } else {
+        die("You are not allowed to view this page!");
     }
     
+    $p = new Products;
 
     $errors = [];
     $products = $p->all();
